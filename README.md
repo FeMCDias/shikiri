@@ -142,7 +142,7 @@ Ensure you have the following installed:
   - `GET /tools/{id}` - Retrieve a tool by ID.
   - `GET /tools/search/by-name-containing` - Find tools by name containing.
   - `GET /tools/search/by-category` - Find tools by category.
-  - `GET /tools/search/all-tools-sorted-by-name` - Find all tools sorted alphabetically.
+  - `GET /tools` - Find all tools sorted alphabetically.
 - **ToolIn Input Class**:
   - **Fields**:
     - `name`: String
@@ -161,6 +161,7 @@ Ensure you have the following installed:
   - `PUT /boards/{id}` - Updates an existing board.
   - `DELETE /boards/{id}` - Deletes a board.
   - `GET /boards/{id}` - Retrieves detailed information about a board.
+  - `GET /boards/search/by-name` - Searches for boards by name containing.
   - `GET /boards` - Lists all boards.
 - **BoardIn Input Class**:
    - **Fields**:
