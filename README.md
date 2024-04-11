@@ -140,8 +140,9 @@ Ensure you have the following installed:
   - `PUT /tools/{id}` - Update a tool.
   - `DELETE /tools/{id}` - Delete a tool.
   - `GET /tools/{id}` - Retrieve a tool by ID.
-  - `GET /tools/search/by-name` - Find tools by name.
+  - `GET /tools/search/by-name-containing` - Find tools by name containing.
   - `GET /tools/search/by-category` - Find tools by category.
+  - `GET /tools/search/all-tools-sorted-by-name` - Find all tools sorted alphabetically.
 - **ToolIn Input Class**:
   - **Fields**:
     - `name`: String
