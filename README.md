@@ -156,17 +156,16 @@ Ensure you have the following installed:
   - [shikiri-board-resource](https://github.com/Juliakp1/shikiri-board-resource)
 - **Description:** The Board service facilitates the creation and management of boards, each containing tasks categorized by their progress status. Key categories include "Not Started", "In Progress", and "Done", enabling users to track their language learning activities effectively.
 - **API Endpoints:**
-### API Routes
   - `POST /boards` - Creates a new board.
   - `PUT /boards/{id}` - Updates an existing board.
   - `DELETE /boards/{id}` - Deletes a board.
   - `GET /boards/{id}` - Retrieves detailed information about a board.
   - `GET /boards` - Lists all boards.
-### BoardIn Input Class
-- **Input** (`BoardIn`): 
+- **BoardIn Input Class**:
+   - **Fields**:
        - `title`: String
        - `description`: String
-       - `categories`: List of `Category`
+       - `categories`: List of `Category` Strings
 
 ## Additional Notes
 
