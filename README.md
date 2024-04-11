@@ -62,6 +62,11 @@ Ensure you have the following installed:
   - `POST /accounts/login` - User login.
   - `PUT /accounts/{id}` - Update user account.
   - `GET /accounts` - Retrieve user account details.
+- **AccountIn Input Class**:
+  - **Fields**:
+    - `name`: String
+    - `email`: String
+    - `password`: String
 
 ### Authentication Service
 
@@ -73,6 +78,18 @@ Ensure you have the following installed:
   - `POST /auth/register` - Register a new user.
   - `POST /auth/login` - Authenticate user and return a token.
   - `POST /auth/solve` - Token validation.
+- **RegisterIn Input Class**:
+  - **Fields**:
+    - `name`: String
+    - `email`: String
+    - `password`: String
+- **CredentialIn Input Class**:
+  - **Fields**:
+    - `email`: String
+    - `password`: String
+- **SolveIn Input Class**:
+  - **Fields**:
+    - `token`: String
 
 ### Discovery Service
 
@@ -104,8 +121,15 @@ Ensure you have the following installed:
   - `POST /tasks` - Create a task.
   - `PUT /tasks/{id}` - Update a task.
   - `GET /tasks` - Retrieve tasks.
+- **TasksIn Input Class**:
+  - **Fields**:
+    - `name`: String
+    - `description`: String
+    - `tool`: String
+    - `board`: String
+    - `done`: Boolean
 
-### Tools Service
+### Tool Service
 
 - **Repositories:** 
   - [shikiri-tool](https://github.com/FeMCDias/shikiri-tool)
@@ -118,14 +142,31 @@ Ensure you have the following installed:
   - `GET /tools/{id}` - Retrieve a tool by ID.
   - `GET /tools/search/by-name` - Find tools by name.
   - `GET /tools/search/by-category` - Find tools by category.
+- **ToolIn Input Class**:
+  - **Fields**:
+    - `name`: String
+    - `category`: String
+    - `description`: String
+    - `userId`: String
 
 ### Board Service
 
 - **Repositories:** 
   - [shikiri-board](https://github.com/Juliakp1/shikiri-board)
   - [shikiri-board-resource](https://github.com/Juliakp1/shikiri-board-resource)
-- **Description:** Manages board functionalities.
-- **Sample API Endpoints:** (Endpoints to be defined, following similar patterns to the tool and task services.)
+- **Description:** The Board service facilitates the creation and management of boards, each containing tasks categorized by their progress status. Key categories include "Not Started", "In Progress", and "Done", enabling users to track their language learning activities effectively.
+- **API Endpoints:**
+### API Routes
+  - `POST /boards` - Creates a new board.
+  - `PUT /boards/{id}` - Updates an existing board.
+  - `DELETE /boards/{id}` - Deletes a board.
+  - `GET /boards/{id}` - Retrieves detailed information about a board.
+  - `GET /boards` - Lists all boards.
+### BoardIn Input Class
+- **Input** (`BoardIn`): 
+       - `title`: String
+       - `description`: String
+       - `categories`: List of `Category`
 
 ## Additional Notes
 
