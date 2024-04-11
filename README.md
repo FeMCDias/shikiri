@@ -1,4 +1,4 @@
-### Partcipants:
+### Participants:
 Felipe Maluli de Carvalho Dias - felipemcd1 (Insper email)<br>
 Julia Karine Peres - juliakp1 (Insper email)
 
