@@ -51,6 +51,8 @@ Ensure you have the following installed:
 
 ## Microservices Overview
 
+All endpoints are available through swagger as well as the following documentation. The swagger URI is defined as /route-name/swagger-ui.html, be that locally or not (Example: https://localhost:8080/tools/swagger-ui.html)
+
 ### Account Service
 
 - **Repositories:** 
