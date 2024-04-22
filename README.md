@@ -13,6 +13,9 @@ Shikiri is a Trello-inspired platform, uniquely designed for language learning. 
 
 Central to Shikiri's design is its ability to integrate various language learning tools directly into user tasks. This seamless incorporation of resources such as Anki decks for spaced repetition or listening practice tools provides a comprehensive and customized learning experience. By tailoring tasks to individual learning goals, Shikiri empowers users to create a personalized study plan that aligns with their aspirations, making the path to language proficiency both clear and engaging.
 
+## Jenkins Setup Proof
+<img width="1440" alt="Screenshot 2024-04-19 at 20 17 42" src="https://github.com/FeMCDias/shikiri/assets/101530321/297eb855-6b46-4a00-9818-00a173b3f9f4">
+
 ## Getting Started Locally
 
 This section guides you through setting up Shikiri on your local machine. It assumes Docker is installed and running on your system. Follow these steps for a clean install, including service setup and resource package deployment.
