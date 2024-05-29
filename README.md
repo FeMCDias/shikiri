@@ -96,6 +96,15 @@ All endpoints are available through swagger as well as the following documentati
   - **Fields**:
     - `token`: String
 
+### Caching Service
+- **Repository:** [shikiri-redis](https://github.com/FeMCDias/shikiri-redis)
+- **Description:** Provides a Redis cache for storing frequently accessed data.
+
+### Database Service
+
+- **Repository:** [shikiri-db](https://github.com/Juliakp1/shikiri-db)
+- **Description:** Provides a PostgreSQL database for storing user and object data.
+
 ### Discovery Service
 
 - **Repository:** [shikiri-discovery](https://github.com/FeMCDias/shikiri-discovery)
@@ -124,8 +133,13 @@ All endpoints are available through swagger as well as the following documentati
 - **Description:** Manages tasks, including creation, updates, and retrieval.
 - **API Endpoints:**
   - `POST /tasks` - Create a task.
-  - `PUT /tasks/{id}` - Update a task.
+  - `PUT /tasks` - Update a task.
   - `GET /tasks` - Retrieve tasks.
+  - `GET /tasks/search/by-name-containing` - Find tasks by name containing.
+  - `GET /tasks/search/by-tool` - Find tasks by tool.
+  - `GET /tasks/search/by-board` - Find tasks by board.
+  - `DELETE /tasks` - Delete a task.
+  
 - **TasksIn Input Class**:
   - **Fields**:
     - `name`: String
@@ -142,9 +156,9 @@ All endpoints are available through swagger as well as the following documentati
 - **Description:** Handles tool operations and JWT authentication.
 - **API Endpoints:**
   - `POST /tools/create` - Create a tool.
-  - `PUT /tools/{id}` - Update a tool.
-  - `DELETE /tools/{id}` - Delete a tool.
-  - `GET /tools/{id}` - Retrieve a tool by ID.
+  - `PUT /tools` - Update a tool.
+  - `DELETE /tools` - Delete a tool.
+  - `GET /tools` - Retrieve a tool by ID.
   - `GET /tools/search/by-name-containing` - Find tools by name containing.
   - `GET /tools/search/by-category` - Find tools by category.
   - `GET /tools` - Find all tools sorted alphabetically.
@@ -163,9 +177,9 @@ All endpoints are available through swagger as well as the following documentati
 - **Description:** The Board service facilitates the creation and management of boards, each containing tasks categorized by their progress status. Key categories include "Not Started", "In Progress", and "Done", enabling users to track their language learning activities effectively.
 - **API Endpoints:**
   - `POST /boards` - Creates a new board.
-  - `PUT /boards/{id}` - Updates an existing board.
-  - `DELETE /boards/{id}` - Deletes a board.
-  - `GET /boards/{id}` - Retrieves detailed information about a board.
+  - `PUT /boards` - Updates an existing board.
+  - `DELETE /boards` - Deletes a board.
+  - `GET /boards` - Retrieves detailed information about a board.
   - `GET /boards/search/by-name` - Searches for boards by name containing.
   - `GET /boards` - Lists all boards.
 - **BoardIn Input Class**:
@@ -176,7 +190,6 @@ All endpoints are available through swagger as well as the following documentati
 
 ## Additional Notes
 
-- **JWT Authentication:** Certain endpoints require a valid JWT token in the `Authorization` header.
 - **Error Handling:** Services implement error checking and handling for secure operation.
 
 For more details on implementation, setup, and usage, please refer to the individual service repositories linked above.
